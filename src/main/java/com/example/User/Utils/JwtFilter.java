@@ -30,7 +30,7 @@ public class JwtFilter implements Filter {
             String token = authHeader.substring(7);
             String email = jwtUtil.extractEmail(token);
 
-            // ✅ Tell Spring Security this user is authenticated
+            // Tell Spring Security this user is authenticated
             UsernamePasswordAuthenticationToken authentication =
                     new UsernamePasswordAuthenticationToken(
                             email,
